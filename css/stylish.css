@@ -8,8 +8,8 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #fff;
-	/*scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);*/
+	scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
 }
 
 section {
@@ -48,7 +48,6 @@ h2 {
 	background-color: #000;
 	grid-template-columns: 1em 10vh auto 10vh 1em;
 	grid-template-rows: 10vh auto 10vh;
-	/*justify-content: center;*/
 	grid-gap: 2em;
 	background-image: url(../img/vhs.gif);
 	background-repeat: repeat;
@@ -56,7 +55,6 @@ h2 {
 
 
 #title {
-	/*border: 1px solid red;*/
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 1;
@@ -64,16 +62,15 @@ h2 {
 }
 
 #mediaplayer {
-	/*border: 1px solid red;*/
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 2;
 	grid-row-end: 4;
 	justify-self: center;
+	box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
 }
 
 #logo {
-	/*border: 1px solid red;*/
 	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 1;
@@ -81,7 +78,6 @@ h2 {
 }
 
 #arrowDN {
-	/*border: 1px solid red;*/
 	grid-column-start: 2;
 	grid-column-end: 5;
 	grid-row-start: 4;
@@ -94,10 +90,10 @@ h2 {
 
 .container2 {
 	display: grid;
-	height: 110vh;
+	/*height: 110vh;*/
 	background-image: url(../img/tokolige1.jpg);
 	grid-template-columns: 2em 25vh 25vh 50vh 2em;
-  	grid-template-rows: 5em auto 5em;
+  	grid-template-rows: 2em auto 2em;
 }
 
 #page {
@@ -109,20 +105,20 @@ h2 {
 	grid-column-end: 5;
 	grid-row-start: 2;
 	grid-row-end: 3;
+	box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
 }
 
 #page img {
 	width: 300px;
 	height: auto;
 	float: right;
-	box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
 }
 
 
 /* 3RD PAGE GRID */
 .merchstore {
 	background-color: #333;
-	padding: 2em;
+	/*padding: 2em;*/
 }
 
 
@@ -136,6 +132,7 @@ h2 {
 #merch img {
 	margin: 1em;
 	transition: all 1s;
+	/*box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);*/
 }
 
 #merch img:hover {
