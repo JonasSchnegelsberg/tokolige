@@ -1,86 +1,149 @@
 /* CSS Document */
 
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Audiowide|Black+Ops+One|Libre+Barcode+39+Text|Gochi+Hand|Permanent+Marker');
+
+
+/* GENERAL */
 body {
-	margin: 0 auto;
 	padding: 0;
-	background-image: url(../img/planewing.png);
+	margin: 0;
+	background-color: #fff;
+	/*scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);*/
 }
 
-/*--------------NAVIGATIONBAR--------------*/
+section {
+	min-height: 100vh;
+}
 
-nav {
-	width: 100%;
-	background-color: #333;
-	overflow: auto;
+article {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+	color: #f9f9f9;
+	font-weight: 700;
+	font-size: 70px;
+	margin: 0;
+	font-family: 'permanent marker';
 	text-transform: uppercase;
 }
 
-li {
-	float: right;
-}
-
-.logo img {
-	position: absolute;
-	margin-top: 10px;
-	margin-left: 0;
-	width: auto;
-	height: 50px;
-}
-
-nav a {
-	width: auto;
-	display: block;
-	padding: 20px 15px;
-	text-decoration: none;
-	font-family: 'arial';
-	color: #f2f2f2;
-	text-align: center;
-	
-}
-
-nav a:hover {
-	transition: 0.2s;
-	text-transform: 0.2s;
-}
-
-ul {
-	list-style: none;
-	font-family: 'comfortaa';
-	color: black;
-	font-size:1.3em;
+h2 {
 	text-align: left;
-	padding: 0;
+	color: #333;
+	font-weight: 400;
+	font-size: 50px;
 	margin: 0;
-	height: 10vh;
+	font-family: 'permanent marker';
+	text-transform: uppercase;
 }
 
-ul iframe {
-	margin: 0.3em 0.3em 0 0.3em;
-}
-/*----- WHATEVER -----*/
+/* 1ST PAGE GRID */
 
-main {
+.container {
+	display: grid;
+	background-color: #000;
+	grid-template-columns: 1em 10vh auto 10vh 1em;
+	grid-template-rows: 10vh auto 10vh;
+	/*justify-content: center;*/
+	grid-gap: 2em;
+	background-image: url(../img/vhs.gif);
+	background-repeat: repeat;
+}
+
+
+#title {
+	/*border: 1px solid red;*/
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+#mediaplayer {
+	/*border: 1px solid red;*/
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 4;
+	justify-self: center;
+}
+
+#logo {
+	/*border: 1px solid red;*/
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+#arrowDN {
+	/*border: 1px solid red;*/
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 4;
+	grid-row-end: 5;
 	margin: 0 auto;
 }
 
-main section {
-	height: 90vh;
+
+/* 2ND PAGE GRID */
+
+.container2 {
+	display: grid;
+	height: 110vh;
+	background-image: url(../img/tokolige1.jpg);
+	grid-template-columns: 2em 25vh 25vh 50vh 2em;
+  	grid-template-rows: 5em auto 5em;
 }
 
-main section article {
-	padding: 6em;
+#page {
+	padding: 1em;
+	font-family: allerta stencil;
+	font-size: 20px;
+	background-color: #f9f9f9;
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 2;
+	grid-row-end: 3;
 }
 
-.shadow {
-	box-shadow: 3px 3px 5px 5px rgba(0,0,0, 0.25);
+#page img {
+	width: 300px;
+	height: auto;
+	float: right;
+	box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
 }
 
-.heartbeat {
-	-webkit-animation: heartbeat 5s ease-in-out infinite both;
-	        animation: heartbeat 5s ease-in-out infinite both;
+
+/* 3RD PAGE GRID */
+.merchstore {
+	background-color: #333;
+	padding: 2em;
 }
 
 
+#merch {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+
+#merch img {
+	margin: 1em;
+	transition: all 1s;
+}
+
+#merch img:hover {
+	transform: scale(1.1);
+}
+
+
+/* SOCIALS */
 #flwbtn {
 	position: fixed;
 	right: 0;
@@ -88,157 +151,48 @@ main section article {
 	margin-right: -6em;
 	margin-bottom: 2em;
 }
-/**
- * ----------------------------------------
- * animation heartbeat
- * ----------------------------------------
- */
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
+
+#flwbtn2 {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	margin-left: 5em;
+	margin-bottom: 1em;
 }
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
+
+#flwbtn3 {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+#flwbtn4 {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	margin-left: 9em;
+	margin-bottom: 1em;
 }
 
 
-.slide-fwd-center:hover {
-	-webkit-animation: slide-fwd-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-fwd-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-
-/* ----------------------------------------------
- * Generated by Animista on 2019-1-28 16:45:27
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-fwd-center
- * ----------------------------------------
- */
-@-webkit-keyframes slide-fwd-center {
-  0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
-  }
-}
-@keyframes slide-fwd-center {
-  0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
-  }
-}
-
-h1 {
-	text-align: center;
-	color: #fff;
-	font-weight: 700;
-	font-size: 70px;
-	margin: 0;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	text-transform: uppercase;
-}
-
-h2 {
-	text-align: center;
-	color: #fff;
-	font-weight: 400;
-	font-size: 50px;
-	margin: 0;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	text-transform: uppercase;
-}
-
+/*----- VIDEO PLAYER -----*/
 video {
-	height: auto;
-	width: 1000px;
-}
-
-#yeet {
+	height: 70vh;
+	width: auto;
 	margin: 0 auto;
 }
 
 #myVideo {
-	height: auto;
-	width: 70vh;
+	margin: 0 auto;
 }
 
 .progressBar{
     position: relative;
     width: 100%;
     height: 10px;
-    backgroud-color: #000;
+    background-color: #000;
 }
 
 .timeBar{
@@ -258,3 +212,4 @@ video {
     height: 100%;
     background-color: #ccc;
 }
+

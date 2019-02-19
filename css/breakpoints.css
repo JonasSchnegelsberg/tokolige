@@ -1,0 +1,79 @@
+/* CSS Document */
+
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 420px) {
+	body {
+		padding: 0;
+		margin: 0;
+		background-color: #fff;
+		scroll-snap-type: none;
+    	scroll-snap-points-y: none;
+	}
+	
+	h1 {
+		text-align: center;
+		color: #f9f9f9;
+		font-weight: 700;
+		font-size: 30px;
+		margin: 0;
+		font-family: 'black ops one';
+		text-transform: uppercase;
+	}
+	
+	
+	video {
+		width: 350px;
+		height: auto;
+	}
+	
+	.container {
+		display: grid;
+		background-color: #000;
+		grid-template-columns: 1em 10vh auto 10vh 1em;
+		grid-template-rows: 10vh auto 10vh;
+		justify-content: center;
+		grid-gap: 0.5em;
+		background-image: url(../img/vhs.gif);
+		background-repeat: no-repeat;
+	}
+	
+	#mediaplayer {
+		/*border: 1px solid red;*/
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid-row-end: 4;
+		justify-self: center;
+	}
+	
+	iframe {
+		display: none;
+	}
+	
+	.container2 {
+		display: grid;
+		background-image: none;
+		grid-template-columns: 0.3em 25vh 25vh 50vh 0.3em;
+		grid-template-rows: 0.3em auto 5em;
+	}
+	
+	#page {
+		padding: 0.3em;
+		font-family: allerta stencil;
+		font-size: 14px;
+		background-color: #fff;
+		grid-column-start: 2;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+	
+	#page img {
+		width: 300px;
+		height: auto;
+		float: none;
+		margin: 0 auto;
+	}
+}
