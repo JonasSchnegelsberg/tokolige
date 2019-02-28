@@ -5,8 +5,8 @@
 
 /* @animation flicker-in-1*/
 .flicker-in-1 {
-	-webkit-animation: flicker-in-1 2s linear both;
-	        animation: flicker-in-1 2s linear both;
+	-webkit-animation: flicker-in-1 1.5s linear both;
+	        animation: flicker-in-1 1.5s linear both;
 }
 
 
@@ -204,8 +204,8 @@
 
 /*@animation flicker-in-2*/
 .flicker-in-2 {
-	-webkit-animation: flicker-in-2 3s linear both;
-	        animation: flicker-in-2 3s linear both;
+	-webkit-animation: flicker-in-2 1.2s linear both;
+	        animation: flicker-in-2 1.2s linear both;
 }
 
 @-webkit-keyframes flicker-in-2 {

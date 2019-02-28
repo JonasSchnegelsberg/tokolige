@@ -3,61 +3,84 @@
 
 /* BREAKPOINTS */
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
 	body {
 		padding: 0;
 		margin: 0;
 		background-color: #fff;
-		scroll-snap-type: none;
-    	scroll-snap-points-y: none;
 	}
 	
 	h1 {
 		text-align: center;
 		color: #f9f9f9;
 		font-weight: 700;
-		font-size: 30px;
-		margin: 0;
-		font-family: 'black ops one';
+		font-size: 50px;
+		font-family: fresh marker;
 		text-transform: uppercase;
+		margin-top: 0.3em;
 	}
 	
+	h2 {
+		font-family: fresh marker;
+		text-align: center;
+		margin-top: 0.3em;
+	}
+	
+	section {
+		height: none;
+	}
 	
 	video {
-		width: 350px;
+		width: 340px;
 		height: auto;
 	}
 	
-	.container {
+	.player_con {
 		display: grid;
 		background-color: #000;
-		grid-template-columns: 1em 10vh auto 10vh 1em;
-		grid-template-rows: 10vh auto 10vh;
+		grid-template-columns: 1em auto 1em;
+		grid-template-rows: 10vh 30vh 10vh;
 		justify-content: center;
 		grid-gap: 0.5em;
-		background-image: url(../img/vhs.gif);
-		background-repeat: no-repeat;
+		background-image: url(../img/plambeach_rgbsplit.png);
+		background-size: cover;
 	}
 	
+	#logo {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		justify-content: center;
+		margin: 2em auto 0 auto;
+	}	
+	
 	#mediaplayer {
-		/*border: 1px solid red;*/
-		grid-column-start: 3;
-		grid-column-end: 4;
-		grid-row-start: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 3;
 		grid-row-end: 4;
 		justify-self: center;
+	}
+	
+	#arrowDN {
+		display: none;
 	}
 	
 	iframe {
 		display: none;
 	}
 	
-	.container2 {
+	.about_con {
 		display: grid;
 		background-image: none;
 		grid-template-columns: 0.3em 25vh 25vh 50vh 0.3em;
-		grid-template-rows: 0.3em auto 5em;
+		grid-template-rows: 0.3em 90vh 0.3em;
 		height: auto;
+	}
+	
+	.about_con h2 {
+		font-size: 40px;
 	}
 	
 	#page {
@@ -67,15 +90,66 @@
 		background-color: #fff;
 		grid-column-start: 2;
 		grid-column-end: 4;
-		grid-row-start: 2;
-		grid-row-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 6;
 		box-shadow: none;
 	}
 	
 	#page img {
-		width: 300px;
-		height: auto;
-		float: none;
-		margin: 0 auto;
+		float: left;
+	}
+	
+	.merchstore_con {
+		background-color: #111;
+		background-image: none;
+		padding: 1em;
+	}
+
+
+	#merch {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 1em;
+	}
+	
+	.merchstore h1 {
+		font-size: 40px;
+	}
+
+	#merch img {
+		margin: 1em;
+		transition: all 1s;
+		width: 50%;
+		height: 50%;
+		/*box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);*/
+	}
+
+	#merch img:hover {
+		transform: scale(1.1);
+	}
+
+	#flwbtn2 {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		margin-left: 5em;
+		margin-bottom: 1em;
+	}
+
+	#flwbtn3 {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
+
+	#flwbtn4 {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		margin-left: 9em;
+		margin-bottom: 1em;
 	}
 }
